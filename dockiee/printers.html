@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Printer Owners | Dockiee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="navbar-placeholder"></div>
+
+    <header class="section text-center">
+        <div class="container">
+            <h1>Earn Money with Your Printer</h1>
+            <p style="max-width: 600px; margin: 0 auto; margin-bottom: 2rem;">Turn your idle printer into a side hustle. Help fellow students and get paid instantly.</p>
+            <a href="login.html" class="btn btn-primary">Register Your Printer</a>
+        </div>
+    </header>
+
+    <!-- Dashboard UI -->
+    <div id="printer-dashboard" class="container" style="margin-top: 2rem; margin-bottom: 4rem;">
+        
+        <!-- Stats Row -->
+        <div class="dashboard-stats">
+            <!-- Status Card -->
+            <div class="stat-card" style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <h4 class="stat-header">Current Status</h4>
+                    <div id="status-text" style="font-size: 1.25rem; font-weight: 700;">Loading...</div>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="status-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <!-- Earnings Card -->
+            <div class="stat-card">
+                 <h4 class="stat-header">Lifetime Earnings</h4>
+                 <div id="stats-earnings" class="stat-value" style="color: var(--dockie-primary);">$0.00</div>
+            </div>
+
+            <!-- Jobs Card -->
+            <div class="stat-card">
+                 <h4 class="stat-header">Total Jobs</h4>
+                 <div id="stats-jobs" class="stat-value">0</div>
+            </div>
+        </div>
+
+        <!-- Job Queue -->
+        <h3 style="margin-bottom: 1.5rem;">Job Queue</h3>
+        <div style="background: white; border-radius: 12px; border: 1px solid var(--dockie-border); overflow: hidden;">
+            <div id="queue-container">
+                <!-- Orders Injected Here -->
+                <div style="padding: 2rem; text-align: center; color: var(--dockie-muted);">Loading orders...</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/printers.js"></script>
+    <script>
+        // Init Shared Components
+        Components.loadNavbar(3); // 3 is 'Printer Owners' link index
+        Components.loadFooter();
+    </script>
+</body>
+</html>
